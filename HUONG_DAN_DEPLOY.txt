@@ -1,0 +1,77 @@
+CP LEARNING – ÔN HSG TIN HỌC THPT
+Gói triển khai hosting tĩnh – ngày 20/10/2026
+
+1. NỘI DUNG GÓI
+- public/: toàn bộ website sẵn triển khai, gồm HTML, CSS, JavaScript và favicon.
+- HUONG_DAN_DEPLOY.txt: hướng dẫn triển khai và chuyển dữ liệu.
+- SHA256SUMS.txt: mã kiểm tra toàn vẹn các tệp website.
+Mã trong public/ có thể chỉnh sửa trực tiếp. Không cần cài thư viện hoặc chạy build.
+Không có mật khẩu, khóa API, Git credential hoặc cấu hình tài khoản Sites trong gói.
+
+2. TRIỂN KHAI TRÊN HOSTING CÓ THƯ MỤC WEB
+- Giải nén gói ZIP.
+- Mở thư mục CP_Learning_HSG_THPT/public/.
+- Tải toàn bộ NỘI DUNG bên trong public/ lên thư mục web của hosting
+  (ví dụ public_html hoặc thư mục được nhà cung cấp chỉ định).
+- Đảm bảo index.html nằm trực tiếp trong thư mục web mong muốn.
+- Mở URL HTTPS của website. Không cần PHP, Node.js hoặc cơ sở dữ liệu phía máy chủ.
+- Có thể đặt website trong thư mục con; giữ nguyên quan hệ giữa các tệp.
+- Các trang nội bộ dùng dấu # nên không cần cấu hình chuyển hướng SPA.
+
+3. TRIỂN KHAI TRÊN DỊCH VỤ HOSTING TĨNH
+- Chọn kiểu dự án HTML/CSS/JavaScript tĩnh.
+- Chọn public/ làm thư mục xuất bản nếu tải cả gói dự án lên dịch vụ.
+- Không đặt lệnh build. Nếu công cụ yêu cầu thư mục gốc, chọn public/.
+- Nếu dịch vụ cho tải trực tiếp thư mục, tải public/.
+Cấu hình quyền truy cập riêng tư trên host mới nếu cần; quyền riêng tư của Sites
+không tự chuyển sang host khác.
+
+4. CHẠY THỬ TRÊN MÁY TÍNH
+- Mở terminal trong public/.
+- Nếu máy đã cài Python 3: chạy python -m http.server 8080
+- Mở http://localhost:8080 trong trình duyệt.
+Không mở index.html bằng file:// để sử dụng và kiểm tra đầy đủ tính năng lưu dữ liệu.
+
+5. CHỨC NĂNG HIỆN CÓ
+- Chọn lớp 10, 11, 12; lộ trình, thư viện bài tập, sổ tay và đồng hồ tự luyện.
+- Lớp 10: lịch luân phiên từ 12/10/2026, 2 bài gốc đầy đủ.
+- Lớp 11: lộ trình 24 tuần, 12 bài khởi đầu.
+- Lớp 12: lộ trình đề xuất 20 tuần, 4 bài khởi đầu.
+- Gợi ý, lời giải và mã C++98; ghi tiến độ và sổ lỗi.
+- Bổ sung đề bằng văn bản hoặc PDF, DOCX, TXT, Markdown, PNG, JPG/JPEG.
+- Mỗi đề tối đa 5 tệp, mỗi tệp 20 MB, tổng 40 MB.
+- Lưu trữ/khôi phục đề, sửa thông tin, xuất/nhập bản sao có tệp đính kèm.
+Website chưa có biên dịch/chấm mã tự động hoặc tự trích xuất PDF/Word.
+
+6. CHUYỂN TIẾN ĐỘ VÀ ĐỀ ĐÃ BỔ SUNG
+Dữ liệu nằm trong trình duyệt, được tách theo địa chỉ website. Gói ZIP không chứa
+các đề người dùng tự tải lên, tiến độ hoặc ghi chép trong trình duyệt.
+TRƯỚC khi đổi host, tên miền, trình duyệt hoặc máy tính:
+A. Tại website cũ, vào Thư viện, chọn “Sao lưu đề bổ sung”.
+   Tệp JSON gồm kho đề của cả ba lớp và các tệp đính kèm.
+B. Chọn lần lượt từng lớp; vào Tiến độ & sổ lỗi, xuất tiến độ của lớp đó.
+C. Tại website mới, nhập bản sao kho đề trước.
+D. Chọn đúng từng lớp rồi nhập tệp tiến độ tương ứng.
+Lưu ý: khi nhập kho đề, các đề được thêm thành bản mới, không ghi đè và có thể trùng
+nếu nhập lại nhiều lần. Trạng thái “đã tự luyện” của đề bổ sung cần đánh dấu lại sau
+khi chuyển host vì bản nhập có mã mới; tiến độ bài học có sẵn vẫn được khôi phục.
+Mở cùng địa chỉ và cùng trình duyệt để tiếp tục dùng dữ liệu đã lưu. Không xóa dữ liệu
+trang web nếu chưa sao lưu. Các đề thêm trên máy giáo viên chưa tự xuất hiện trên máy
+học sinh: cần chuyển tệp sao lưu và nhập trên thiết bị nhận.
+
+7. KIỂM TRA SAU TRIỂN KHAI
+- Tên hiển thị: CP Learning – Ôn HSG Tin học THPT.
+- Chuyển cả ba lớp và mở các trang trong menu.
+- Tiêu đề thẻ trình duyệt đổi theo trang và lớp.
+- Thêm một đề thử, đính kèm tệp, tải lại trang và mở lại tệp.
+- Xuất và nhập bản sao kho đề.
+- Thử giao diện trên điện thoại.
+- Nếu còn thấy bản cũ sau cập nhật: tải lại trang hoặc làm mới bộ nhớ đệm của host.
+
+8. ĐỔI TÊN / CHỈNH SỬA SAU NÀY
+- index.html: thương hiệu, tiêu đề mặc định, mô tả, menu và chân trang.
+- app.js: tiêu đề theo trang/lớp, lộ trình và các màn hình học tập.
+- data.js, grade10.js, grade12.js: nội dung bài học có sẵn.
+- uploads.js: kho đề bổ sung và tệp đính kèm trên trình duyệt.
+- style.css: giao diện; favicon.svg: biểu tượng thẻ trình duyệt.
+Giữ nguyên khóa lưu trữ và định dạng bản sao nếu muốn tiếp tục dùng dữ liệu cũ.
